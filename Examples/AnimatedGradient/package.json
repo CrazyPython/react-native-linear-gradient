@@ -7,17 +7,19 @@
 		"test": "jest"
 	},
 	"dependencies": {
-    "react": "16.0.0-alpha.6",
-    "react-native": "^0.44.0",
-		"react-native-linear-gradient": "file:../.."
+    "react": "16.4.1",
+    "react-native": "0.56.0-rc.4",
+		"react-native-linear-gradient": "react-native-community/react-native-linear-gradient"
 	},
 	"devDependencies": {
-		"babel-jest": "18.0.0",
-		"babel-preset-react-native": "1.9.1",
-		"jest": "18.0.0",
-		"react-test-renderer": "15.4.1"
+		"babel-jest": "20.0.3",
+		"@babel/core": "7.0.0-beta.47",
+		"babel-preset-react-native": "5.0.2",
+		"jest": "20.0.4",
+		"react-test-renderer": "16.0.0-beta.5"
 	},
 	"jest": {
 		"preset": "react-native"
 	}
 }
+

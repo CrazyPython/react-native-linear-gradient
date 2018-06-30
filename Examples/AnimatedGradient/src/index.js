@@ -13,8 +13,8 @@ function incrementColor(color, step) {
   return `#${'0'.repeat(6 - newIntColor.length)}${newIntColor}`;
 };
 
-const AnimatedGradient = React.createClass({
-  mixins: [TimerMixin],
+class AnimatedGradient extends React.Component {
+  mixins: [TimerMixin];
 
   getInitialState() {
     return {
@@ -22,17 +22,22 @@ const AnimatedGradient = React.createClass({
       colorTop: '#000000',
       colorBottom: '#cccccc',
     }
-  },
+  }
+  
+  constructor(props) {
+      super(props)
+      this.state = this.getInitialState()
+  }
 
   componentDidMount() {
-    this.setInterval(() => {
+    setInterval(() => {
       this.setState({
         count: this.state.count + 1,
         colorTop: incrementColor(this.state.colorTop, 1),
         colorBottom: incrementColor(this.state.colorBottom, -1),
       });
     }, 20);
-  },
+  }
 
   render() {
     return (
@@ -45,7 +50,7 @@ const AnimatedGradient = React.createClass({
       </View>
     );
   }
-});
+};
 
 const styles = StyleSheet.create({
   container: {
